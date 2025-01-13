@@ -1,10 +1,10 @@
 ## Hi there, I'm [Subrato Basak](https://subratobcodez.github.io) 👋
 
 
-## A Passionate Mobile Application Developer 🚀 
+## A Passionate Flutter Developer 🚀 
 
 -  📱 Software Developer (Flutter)
-- I currently work at ByteGone as a junior flutter developer. 
+- I currently work at ByteGone as a Jr. Flutter Dev. 
 - How to reach me: Facebook - [Subrato Basak](https://facebook.com/subrato.basak.96), Linkedin - [Subrato Basak](https://www.linkedin.com/in/subrato-basak53/)
 
 ## Languages and Tools:
