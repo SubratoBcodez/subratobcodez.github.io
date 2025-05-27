@@ -190,6 +190,58 @@
             margin-bottom: 15px;
         }
 
+        .image-link {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .image-link label {
+            display: block;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .link-input {
+            width: calc(100% - 40px);
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-family: monospace;
+            background: white;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .link-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+        }
+
+        .btn-copy {
+            width: 35px;
+            height: 35px;
+            border: none;
+            background: #667eea;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px;
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+
+        .btn-copy:hover {
+            background: #5a67d8;
+            transform: scale(1.05);
+        }
+
         .image-actions {
             display: flex;
             gap: 10px;
@@ -204,10 +256,6 @@
 
         .btn-danger {
             background: linear-gradient(135deg, #ff4757, #ff3742);
-        }
-
-        .btn-info {
-            background: linear-gradient(135deg, #3742fa, #2f3542);
         }
 
         .btn-success {
@@ -508,6 +556,11 @@
                         <div class="image-info">
                             <div class="image-name">${image.name}</div>
                             <div class="image-size">${this.formatFileSize(image.size)} • ${image.views} views</div>
+                            <div class="image-link">
+                                <label>Direct Link:</label>
+                                <input type="text" class="link-input" value="${image.url}" readonly onclick="this.select()">
+                                <button class="btn-copy" onclick="imageHost.copyLink('${image.id}')" title="Copy to clipboard">📋</button>
+                            </div>
                             <div class="image-actions">
                                 <button class="btn btn-small btn-info" onclick="imageHost.copyLink('${image.id}')">Copy Link</button>
                                 <button class="btn btn-small btn-success" onclick="imageHost.downloadImage('${image.id}')">Download</button>
